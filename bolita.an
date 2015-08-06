@@ -9,11 +9,6 @@
       \"Default Timeline\": {\
       }\
    }},\
-\"bolita\": {\
-   \"timelines\": {\
-      \"Default Timeline\": {\
-      }\
-   }},\
 \"Precargador\": {\
    \"timelines\": {\
 \
@@ -26,8 +21,49 @@
    \"timelines\": {\
       \"Default Timeline\": {\
       }\
+   }},\
+\"PICK_2\": {\
+   \"timelines\": {\
+      \"Default Timeline\": {\
+      }\
+   }},\
+\"PICK_3\": {\
+   \"timelines\": {\
+      \"Default Timeline\": {\
+      }\
+   }},\
+\"PICK_4\": {\
+   \"timelines\": {\
+      \"Default Timeline\": {\
+      }\
+   }},\
+\"Submit\": {\
+   \"timelines\": {\
+      \"Default Timeline\": {\
+      }\
    }}\
 }",
+	"Submit-Default Timeline_playhead_ms":"0",
+	"pref__general__GenerateSmoothTransitions":"true",
+	"symbol_PICK_3":{
+		"element_${Ellipse}":{
+			"timelineColor2":"0xd35d6e",
+			"timelineColor3":"0x7e4b52",
+			"animationEnabled":"true",
+			"timelineColor":"0xfb657a"}},
+	"symbol_PICK_2":{
+		"element_${Ellipse}":{
+			"timelineColor2":"0x5a558a",
+			"timelineColor3":"0x4a485e",
+			"animationEnabled":"true",
+			"timelineColor":"0x63599f"}},
+	"symbol_PICK_4":{
+		"element_${Ellipse}":{
+			"timelineColor2":"0xd8b467",
+			"timelineColor3":"0x81714f",
+			"animationEnabled":"true",
+			"timelineColor":"0xffd46d"}},
+	"PICK_4-Default Timeline_playhead_ms":"0",
 	"pref__general__FilterNonAnimatedElements":"false",
 	"symbol_bolita":{
 		"element_${Ellipse}":{
@@ -35,21 +71,43 @@
 			"timelineColor3":"0x5b6c4d",
 			"animationEnabled":"true",
 			"timelineColor":"0x91c767"}},
-	"pref__general__AutoKeyframePropertiesArmed":"true",
+	"PICK_3-Default Timeline_playhead_ms":"0",
+	"PICK_2-Default Timeline_playhead_ms":"0",
+	"pref__general__AutoKeyframePropertiesArmed":"false",
 	"stage-Default Timeline_playhead_ms":"500",
 	"symbol_stage":{
 		"element_${bolita}":{
 			"timelineColor2":"0x4fa275",
 			"timelineColor3":"0x456a55",
-			"animationEnabled":"true",
+			"animationEnabled":"false",
 			"timelineColor":"0x50bd82"},
 		"dummyStageParentWidth":"550px",
 		"dummyStageParentHeight":"400px",
+		"element_${PICK_2}":{
+			"timelineColor2":"0x107faa",
+			"timelineColor3":"0x295a6d",
+			"animationEnabled":"false",
+			"timelineColor":"0x008dc8"},
 		"element_${PICK_1}":{
 			"timelineColor2":"0x326a96",
 			"timelineColor3":"0x385063",
 			"animationEnabled":"true",
 			"timelineColor":"0x2f73ad"},
+		"element_${Submit}":{
+			"timelineColor2":"0x4fa275",
+			"timelineColor3":"0x456a55",
+			"animationEnabled":"true",
+			"timelineColor":"0x50bd82"},
+		"element_${Text}":{
+			"timelineColor2":"0x1aa38f",
+			"timelineColor3":"0x2a6a61",
+			"animationEnabled":"false",
+			"timelineColor":"0x00bda4"},
+		"element_${Rectangle}":{
+			"timelineColor2":"0x168c84",
+			"timelineColor3":"0x2a605c",
+			"animationEnabled":"false",
+			"timelineColor":"0x00a096"},
 		"defaultStageParentHeight":"400px",
 		"element_${Ellipse}":{
 			"timelineColor2":"0x1095d2",
@@ -61,18 +119,37 @@
 			"timelineColor3":"0x7b7652",
 			"timelineColor":"0xeedf79"},
 		"defaultStageParentWidth":"550px",
+		"element_${PICK_4}":{
+			"timelineColor2":"0xba5b89",
+			"timelineColor3":"0x734a5f",
+			"animationEnabled":"true",
+			"timelineColor":"0xdb619d"},
+		"element_${PICK_3}":{
+			"timelineColor2":"0xb099ce",
+			"timelineColor3":"0x70657c",
+			"animationEnabled":"true",
+			"timelineColor":"0xceaef4"},
 		"element_${RoundRect}":{
 			"timelineColor2":"0x168c84",
 			"timelineColor3":"0x2a605c",
+			"animationEnabled":"false",
 			"timelineColor":"0x00a096"}},
-	"TransitionIdCounter":"26",
+	"TransitionIdCounter":"43",
 	"CompZoomFactor":"100",
 	"viewStartY":"0",
 	"pixelsPerMs":"0.2",
-	"pref__general__GenerateSmoothTransitions":"true",
+	"symbol_Submit":{
+		"element_${Rectangle}":{
+			"timelineColor2":"0xcbbd71",
+			"timelineColor3":"0x7b7652",
+			"timelineColor":"0xeedf79"},
+		"element_${Text}":{
+			"timelineColor2":"0x81aa62",
+			"timelineColor3":"0x5b6c4d",
+			"timelineColor":"0x91c767"}},
 	"PICK_1-Default Timeline_playhead_ms":"0",
 	"usedBOM":"false",
-	"nextElementColorIndex":"8",
+	"nextElementColorIndex":"6",
 	"bolita-Default Timeline_playhead_ms":"0",
 	"StageZoomFactor":"100",
 	"PICK_1-Default Timeline_mark_ms":"-1",

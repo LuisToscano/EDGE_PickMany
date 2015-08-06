@@ -85,3 +85,113 @@
     at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/edge.authoring.6.0.0.min.js:74:302)
     at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
     at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153210:INFO:CONSOLE(1)] "TypeError: Cannot set property 'an_originalId' of undefined
+    at Function.d.data (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/edge.6.0.0.min.js:74:288)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:25)
+    at <anonymous>:0:63", source:  (1)
+[0806/153217:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153218:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153219:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153219:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153219:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.EdgeDOM.setInteractiveCookie (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:25:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:21)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153324:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153324:INFO:CONSOLE(48)] "TypeError: Cannot read property 'style' of undefined
+    at Object.EdgeDOM.updateOverlay (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js:38:233)
+    at Object.d.seekInTool (http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/edge.authoring.6.0.0.min.js:74:302)
+    at eval (eval at <anonymous> (unknown source), <anonymous>:1:23)
+    at <anonymous>:0:63", source: http://127.0.0.1:54321/_DRIVE_C_EVIRD_/Users/ltoscano/Documents/bolita/edge_includes/an.canvas.overlay.min.js (48)
+[0806/153339:ERROR:renderer_main.cc(226)] Running without renderer sandbox

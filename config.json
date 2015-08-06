@@ -1,0 +1,21 @@
+{
+    "num_intentos": 2,
+    "picks": {
+        "1": {
+            "descripcion": "bola rosada",
+            "esRespuesta": true
+        },
+        "2": {
+            "descripcion": "bola verde",
+            "esRespuesta": false
+        },
+        "3": {
+            "descripcion": "bola naranja",
+            "esRespuesta": false
+        },
+        "4": {
+            "descripcion": "bola celeste",
+            "esRespuesta": true
+        }
+    }
+}

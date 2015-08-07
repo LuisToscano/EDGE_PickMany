@@ -16,9 +16,10 @@
         resources = [
         ],
         scripts = [
-            js+"interactionUtilities.js",
             js+"jquery-1.10.2.js",
-            js+"pickManyUtilities.js"
+            js+"pickManyUtilities.js",
+            js+"timerUtilities.js",
+            js+"interactionUtilities.js"
         ],
         symbols = {
             "stage": {
@@ -59,6 +60,12 @@
                             symbolName: 'Submit',
                             type: 'rect',
                             rect: ['390', '303px', '128', '31', 'auto', 'auto']
+                        },
+                        {
+                            id: 'TIMER_CONTAINER',
+                            symbolName: 'TIMER_CONTAINER',
+                            type: 'rect',
+                            rect: ['390', '0', '161', '34', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -105,14 +112,14 @@
                             '129px'
                         ],
                         [
-                            "eid35",
-                            "left",
+                            "eid42",
+                            "top",
                             500,
                             0,
                             "linear",
-                            "${PICK_1}",
-                            '45px',
-                            '45px'
+                            "${Submit}",
+                            '303px',
+                            '303px'
                         ],
                         [
                             "eid37",
@@ -135,14 +142,14 @@
                             '129px'
                         ],
                         [
-                            "eid42",
-                            "top",
+                            "eid35",
+                            "left",
                             500,
                             0,
                             "linear",
-                            "${Submit}",
-                            '303px',
-                            '303px'
+                            "${PICK_1}",
+                            '45px',
+                            '45px'
                         ]
                     ]
                 }
@@ -377,18 +384,18 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '128px', '31px', 'auto', 'auto'],
                             id: 'Rectangle',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '128px', '31px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(241,248,33,1.00)']
                         },
                         {
-                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
+                            type: 'text',
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​otro botón</p>',
-                            type: 'text',
-                            rect: ['9px', '3px', '112px', '20px', 'auto', 'auto']
+                            rect: ['9px', '3px', '112px', '20px', 'auto', 'auto'],
+                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
                         }
                     ],
                     style: {
@@ -402,6 +409,89 @@
                     autoPlay: true,
                     data: [
 
+                    ]
+                }
+            },
+            "TIMER_CONTAINER": {
+                version: "6.0.0",
+                minimumCompatibleVersion: "5.0.0",
+                build: "6.0.0.400",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['0px', '0px', '161px', '31px', 'auto', 'auto'],
+                            id: 'Rectangle',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            type: 'rect',
+                            fill: ['rgba(192,192,192,1)']
+                        },
+                        {
+                            rect: ['18px', '3px', '128px', '31px', 'auto', 'auto'],
+                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
+                            id: 'Text',
+                            text: '<p style=\"margin: 0px;\">​TIMER</p>',
+                            align: 'center',
+                            type: 'text'
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            isStage: 'true',
+                            rect: [undefined, undefined, '161px', '34px']
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 500,
+                    autoPlay: false,
+                    labels: {
+                        "normal": 0,
+                        "10": 250
+                    },
+                    data: [
+                        [
+                            "eid46",
+                            "background-color",
+                            0,
+                            250,
+                            "linear",
+                            "${Rectangle}",
+                            'rgba(192,192,192,1)',
+                            'rgba(255,0,0,1.00)'
+                        ],
+                        [
+                            "eid47",
+                            "background-color",
+                            250,
+                            250,
+                            "linear",
+                            "${Rectangle}",
+                            'rgba(255,0,0,1.00)',
+                            'rgba(192,192,192,1)'
+                        ],
+                        [
+                            "eid51",
+                            "color",
+                            0,
+                            250,
+                            "linear",
+                            "${Text}",
+                            'rgba(0,0,0,1)',
+                            'rgba(255,255,255,1.00)'
+                        ],
+                        [
+                            "eid52",
+                            "color",
+                            250,
+                            250,
+                            "linear",
+                            "${Text}",
+                            'rgba(255,255,255,1.00)',
+                            'rgba(0,0,0,1)'
+                        ]
                     ]
                 }
             }

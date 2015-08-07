@@ -19,6 +19,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       Symbol.bindElementAction(compId, symbolName, "${PICK_1}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
+         startTimer(sym, "TIMER_CONTAINER");
          pickClickeado(sym, "PICK_1");
 
       });
@@ -26,6 +27,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
          // Insertar código para ejecutarse cuando el símbolo se crea aquí
+         inicializarTimer(sym, "TIMER_CONTAINER");
          inicializarPickMany(sym);
 
       });
@@ -33,6 +35,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       Symbol.bindElementAction(compId, symbolName, "${PICK_2}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
+         startTimer(sym, "TIMER_CONTAINER");
          pickClickeado(sym, "PICK_2");
 
       });
@@ -40,6 +43,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       Symbol.bindElementAction(compId, symbolName, "${PICK_3}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
+         startTimer(sym, "TIMER_CONTAINER");
          pickClickeado(sym, "PICK_3");
 
       });
@@ -47,6 +51,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       Symbol.bindElementAction(compId, symbolName, "${PICK_4}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
+         startTimer(sym, "TIMER_CONTAINER");
          pickClickeado(sym, "PICK_4");
 
       });
@@ -181,5 +186,27 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    
    })("Submit");
    //Edge symbol end:'Submit'
+
+   //=========================================================
+   
+   //Edge symbol: 'TIMER_CONTAINER'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 250, function(sym, e) {
+         // introducir código aquí
+         sym.stop();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         // introducir código aquí
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("TIMER_CONTAINER");
+   //Edge symbol end:'TIMER_CONTAINER'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-17298671");

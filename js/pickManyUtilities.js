@@ -1,4 +1,14 @@
 
+parent.$(parent.document).on("EDGE_Plantilla_creationComplete", function (data) {
+    $("body").trigger({
+        type: "EDGE_Recurso_sendPreviousData",
+        block: false,
+        timer: {"timerObj": data.sym.$("TIMER_CONTAINER"), "remaining_time": 9, "current_state": "10"},
+        previous_data: {"selected": []},
+        attempts: 0,
+        sym: data.sym
+    });
+});
 
 parent.$(parent.document).on("EDGE_Plantilla_submitApplied", function (data) {
 
@@ -19,16 +29,7 @@ parent.$(parent.document).on("EDGE_Plantilla_submitApplied", function (data) {
         block: this_block,
         show_answers: this_show_answers,
         attempts: intentos,
-        sym: data.sym
-    });
-});
-
-parent.$(parent.document).on("EDGE_Plantilla_creationComplete", function (data) {
-    $("body").trigger({
-        type: "EDGE_Recurso_sendPreviousData",
-        block: false,
-        previous_data: {"selected": []},
-        attempts: 0,
+        timer: {"timerObj": data.timer.timerObj, "reset_timer": true},
         sym: data.sym
     });
 });
@@ -47,6 +48,17 @@ $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
 
     if (data.block) {
         stage.prop("blocked", true);
+        if(stage.prop("usa_timer")){
+            if(data.timer.timerObj!==null){
+                stopTimer(data.timer.timerObj);
+            }
+        }
+    }else{
+        if(stage.prop("usa_timer")){
+            if(data.timer.timerObj!==null && data.timer.reset_timer){
+                resetTimer(data.sym, data.timer.timerObj);
+            }
+        } 
     }
 
     stage.prop("intentos_previos", data.attempts);
@@ -59,6 +71,10 @@ $("body").on("EDGE_Recurso_sendPreviousData", function (data) {
 
     if (data.block) {
         stage.prop("blocked", true);
+        if(stage.prop("usa_timer") && data.timer.timerObj!==null){
+            setHTMLTimer(data.timer.remaining_time, data.timer.timerObj);
+            cambiarEstadoTimer(data.sym, data.timer.timerObj, data.timer.current_state);
+        }
     }
 
     if (data.attempts > 0) {
@@ -73,6 +89,7 @@ $("body").on("EDGE_Recurso_sendPreviousData", function (data) {
 
 function inicializarPickMany(sym) {
     var stage = $(sym.getComposition().getStage().ele);
+    stage.prop("interaction_type", "choice");
     stage.prop("intentos_previos", 0);
     stage.prop("blocked", false);
 
@@ -88,6 +105,7 @@ function inicializarPickMany(sym) {
         });
         stage.prop("cantidad_picks", cont);
         inicializarPicks(sym);
+        stage.prop("usa_timer", typeof startTimer == 'function');
         enviarEventoActividadTerminada(sym);
     });
 }
@@ -207,11 +225,24 @@ function checkAnswersPickMany(sym) {
                 respuesta.selected.push(pickObj.prop("nombre") + "_(" + pickObj.prop("nombre") + ")");
             }
         }
-
+        
+         var timer = {};
+        if(stage.prop("usa_timer")){
+            timer.timerObj = stage.prop("timer");
+            timer.remaining_time = timer.timerObj.prop("segundos_restantes");
+            timer.current_state = timer.timerObj.prop("alertState");
+        }else{
+            timer.timerObj = null;
+            timer.remaining_time = null;
+            timer.current_state = null;
+        }
+        timer.time_out = false;
+        
         if (correct) {
-            enviarEventoInteraccion(interactionId, "choice", stage.prop("pregunta"), respuesta, "correct", stage.prop("intentos_previos"), stage.prop("num_intentos"), sym);
-        } else {
-            enviarEventoInteraccion(interactionId, "choice", stage.prop("pregunta"), respuesta, "incorrect", stage.prop("intentos_previos"), stage.prop("num_intentos"), sym);
+            enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), respuesta, "correct", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, sym);
+        }
+        else {
+            enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), respuesta, "incorrect", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, sym);
         }
     }
 }

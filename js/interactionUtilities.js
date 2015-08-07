@@ -9,11 +9,12 @@ function enviarEventoActividadTerminada(sym){
 		});
 }
 
-function enviarEventoInteraccion(id,tipo,respuesta,resultado,intentos_previos,limite_intentos, sym){
+function enviarEventoInteraccion(id,tipo,pregunta,respuesta,resultado,intentos_previos,limite_intentos, sym){
 	parent.$(parent.document).trigger({
 			type: "EDGE_Plantilla_submitApplied",
 			interactionId: id,
 			interactionType: tipo,
+                        question: pregunta,
 			answer: respuesta,
 			results: resultado,
 			attempts: intentos_previos,

@@ -19,7 +19,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       Symbol.bindElementAction(compId, symbolName, "${PICK_1}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
-         seleccionarPick(sym, "PICK_1");
+         pickClickeado(sym, "PICK_1");
 
       });
       //Edge binding end
@@ -33,21 +33,28 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       Symbol.bindElementAction(compId, symbolName, "${PICK_2}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
-         seleccionarPick(sym, "PICK_2");
+         pickClickeado(sym, "PICK_2");
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${PICK_3}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
-         seleccionarPick(sym, "PICK_3");
+         pickClickeado(sym, "PICK_3");
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${PICK_4}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
-         seleccionarPick(sym, "PICK_4");
+         pickClickeado(sym, "PICK_4");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${Submit}", "click", function(sym, e) {
+         // introducir aquí código para clic de ratón
+         checkAnswersPickMany(sym);
 
       });
       //Edge binding end

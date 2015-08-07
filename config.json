@@ -1,5 +1,6 @@
 {
     "num_intentos": 2,
+    "pregunta":"esta es la pregunta de prueba de mi pick many",
     "picks": {
         "1": {
             "descripcion": "bola rosada",
@@ -15,7 +16,7 @@
         },
         "4": {
             "descripcion": "bola celeste",
-            "esRespuesta": true
+            "esRespuesta": false
         }
     }
 }

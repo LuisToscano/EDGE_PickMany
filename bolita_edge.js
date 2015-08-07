@@ -105,14 +105,14 @@
                             '129px'
                         ],
                         [
-                            "eid42",
-                            "top",
+                            "eid35",
+                            "left",
                             500,
                             0,
                             "linear",
-                            "${Submit}",
-                            '303px',
-                            '303px'
+                            "${PICK_1}",
+                            '45px',
+                            '45px'
                         ],
                         [
                             "eid37",
@@ -135,14 +135,14 @@
                             '129px'
                         ],
                         [
-                            "eid35",
-                            "left",
+                            "eid42",
+                            "top",
                             500,
                             0,
                             "linear",
-                            "${PICK_1}",
-                            '45px',
-                            '45px'
+                            "${Submit}",
+                            '303px',
+                            '303px'
                         ]
                     ]
                 }
@@ -167,8 +167,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '54px', '54px']
+                            rect: [null, null, '54px', '54px']
                         }
                     }
                 },
@@ -223,8 +222,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '54px', '54px']
+                            rect: [null, null, '54px', '54px']
                         }
                     }
                 },
@@ -279,8 +277,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '54px', '54px']
+                            rect: [null, null, '54px', '54px']
                         }
                     }
                 },
@@ -335,8 +332,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '54px', '54px']
+                            rect: [null, null, '54px', '54px']
                         }
                     }
                 },
@@ -381,24 +377,23 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '128px', '31px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '128px', '31px', 'auto', 'auto'],
                             fill: ['rgba(241,248,33,1.00)']
                         },
                         {
-                            rect: ['9px', '3px', '112px', '20px', 'auto', 'auto'],
+                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​otro botón</p>',
-                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                            type: 'text'
+                            type: 'text',
+                            rect: ['9px', '3px', '112px', '20px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '128px', '31px']
+                            rect: [null, null, '128px', '31px']
                         }
                     }
                 },

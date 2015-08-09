@@ -1,38 +1,42 @@
+//<editor-fold defaultstate="collapsed" desc="Parent example">
+/*
+ parent.$(parent.document).on("EDGE_Plantilla_creationComplete", function (data) {
+ $("body").trigger({
+ type: "EDGE_Recurso_sendPreviousData",
+ block: false,
+ timer: {"remaining_time": 9, "current_state": "10"},
+ previous_data: {"selected": []},
+ attempts: 0,
+ sym: data.sym
+ });
+ });
+ 
+ parent.$(parent.document).on("EDGE_Plantilla_submitApplied", function (data) {
+ 
+ console.log(data);
+ 
+ var this_block = false;
+ var this_show_answers = false;
+ 
+ var intentos = data.attempts + 1;
+ 
+ if (intentos >= data.attempts_limit) {
+ this_block = true;
+ this_show_answers = true;
+ }
+ 
+ $("body").trigger({
+ type: "EDGE_Recurso_postSubmitApplied",
+ block: this_block,
+ show_answers: this_show_answers,
+ attempts: intentos,
+ timer: {"timerObj": data.timer.timerObj, "reset_timer": true},
+ sym: data.sym
+ });
+ });
+ */
+//</editor-fold>
 
-parent.$(parent.document).on("EDGE_Plantilla_creationComplete", function (data) {
-    $("body").trigger({
-        type: "EDGE_Recurso_sendPreviousData",
-        block: false,
-        timer: {"timerObj": data.sym.$("TIMER_CONTAINER"), "remaining_time": 9, "current_state": "10"},
-        previous_data: {"selected": []},
-        attempts: 0,
-        sym: data.sym
-    });
-});
-
-parent.$(parent.document).on("EDGE_Plantilla_submitApplied", function (data) {
-
-    console.log(data);
-
-    var this_block = false;
-    var this_show_answers = false;
-
-    var intentos = data.attempts + 1;
-
-    if (intentos >= data.attempts_limit) {
-        this_block = true;
-        this_show_answers = true;
-    }
-
-    $("body").trigger({
-        type: "EDGE_Recurso_postSubmitApplied",
-        block: this_block,
-        show_answers: this_show_answers,
-        attempts: intentos,
-        timer: {"timerObj": data.timer.timerObj, "reset_timer": true},
-        sym: data.sym
-    });
-});
 
 //***********************************************************************
 
@@ -48,17 +52,16 @@ $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
 
     if (data.block) {
         stage.prop("blocked", true);
-        if(stage.prop("usa_timer")){
-            if(data.timer.timerObj!==null){
-                stopTimer(data.timer.timerObj);
+        if (stage.prop("usa_timer")) {
+
+            stopTimer(data.sym);
+        }
+    } else {
+        if (stage.prop("usa_timer")) {
+            if (data.timer.reset_timer) {
+                resetTimer(data.sym);
             }
         }
-    }else{
-        if(stage.prop("usa_timer")){
-            if(data.timer.timerObj!==null && data.timer.reset_timer){
-                resetTimer(data.sym, data.timer.timerObj);
-            }
-        } 
     }
 
     stage.prop("intentos_previos", data.attempts);
@@ -71,15 +74,14 @@ $("body").on("EDGE_Recurso_sendPreviousData", function (data) {
 
     if (data.block) {
         stage.prop("blocked", true);
-        if(stage.prop("usa_timer") && data.timer.timerObj!==null){
-            setHTMLTimer(data.timer.remaining_time, data.timer.timerObj);
-            cambiarEstadoTimer(data.sym, data.timer.timerObj, data.timer.current_state);
+        if (stage.prop("usa_timer") ) {
+            setHTMLTimer(data.timer.remaining_time, data.sym);
+            cambiarEstadoTimer(data.sym, data.timer.current_state);
         }
     }
 
-    if (data.attempts > 0) {
-        stage.prop("intentos_previos", data.attempts);
-    }
+    stage.prop("intentos_previos", data.attempts);
+
 });
 
 //***********************************************************************
@@ -123,7 +125,7 @@ function inicializarPicks(sym) {
         var esRespuesta = false;
         if (objPicks[i].hasOwnProperty("esRespuesta")) {
             esRespuesta = objPicks[i].esRespuesta;
-            if(esRespuesta){
+            if (esRespuesta) {
                 contRespuestas++;
             }
         }
@@ -225,19 +227,19 @@ function checkAnswersPickMany(sym) {
                 respuesta.selected.push(pickObj.prop("nombre") + "_(" + pickObj.prop("nombre") + ")");
             }
         }
-        
-         var timer = {};
-        if(stage.prop("usa_timer")){
-            timer.timerObj = stage.prop("timer");
-            timer.remaining_time = timer.timerObj.prop("segundos_restantes");
-            timer.current_state = timer.timerObj.prop("alertState");
-        }else{
-            timer.timerObj = null;
+
+        var timer = {};
+        if (stage.prop("usa_timer")) {
+            var timerObj = buscar_sym(sym, stage.prop("timer"), true);
+            timer.remaining_time = timerObj.prop("segundos_restantes");
+            timer.current_state = timerObj.prop("alertState");
+        } else {
+            //timer.timerObj = null;
             timer.remaining_time = null;
             timer.current_state = null;
         }
-        timer.time_out = false;
-        
+        //timer.time_out = false;
+
         if (correct) {
             enviarEventoInteraccion(stage.prop("interaction_type"), stage.prop("pregunta"), respuesta, "correct", stage.prop("intentos_previos"), stage.prop("num_intentos"), timer, sym);
         }
@@ -250,9 +252,11 @@ function checkAnswersPickMany(sym) {
 //**********************************************************************************
 
 function aplicarCambiosPreviosPickMany(data, sym) {
-    $.each(data.selected, function (key, val) {
-        seleccionarPick(sym, "PICK_" + nombreANumero(val));
-    });
+    if (!isEmpty(data.selected)) {
+        $.each(data.selected, function (key, val) {
+            seleccionarPick(sym, "PICK_" + nombreANumero(val));
+        });
+    }
 }
 
 //***********************************************************************

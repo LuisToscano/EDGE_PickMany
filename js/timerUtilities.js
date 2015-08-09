@@ -5,34 +5,38 @@
  */
 
 $("body").on("TimeAlert", function (data) {
-    cambiarEstadoTimer(data.sym, data.timerObj, data.remaining_time);
+    cambiarEstadoTimer(data.sym, data.remaining_time);  //POSIBLEMENTE CON ERROR
 });
 
-function cambiarEstadoTimer(sym, timerObj, estado){
-    var nombre = timerObj.prop("nombre");
-    if(timerObj.prop("alertState")!==(""+estado)){
-        sym.getSymbol(nombre).play(estado);
-        timerObj.prop("alertState", ""+estado);
+function cambiarEstadoTimer(sym, estado) {
+    var stage = $(sym.getComposition().getStage().ele);
+    var timerObj = buscar_sym(sym, stage.prop("timer"), true);
+
+    if (timerObj.prop("alertState") !== ("" + estado)) {
+        buscar_sym(sym, stage.prop("timer")).play(estado);
+        timerObj.prop("alertState", "" + estado);
     }
 }
 
 //*************************************************************************************
 
-function inicializarTimer(sym, nombreTimer) {
+function inicializarTimer(sym) {
     var stage = $(sym.getComposition().getStage().ele);
-    var timerObj = sym.$(nombreTimer);
-    stage.prop("timer", timerObj);
-    $.getJSON("timer_config.json", function (data) {
+
+
+    $.getJSON("timer_config.json").done(function (data) {
+        var timerObj = buscar_sym(sym, data.sym, true);
         $.each(data, function (key, val) {
             timerObj.prop(key, val);
         });
-    }).done(function () {
+
+        stage.prop("timer", data.sym);
         var spanElement = timerObj.find("p");
         timerObj.prop("timer_text", spanElement);
-        setHTMLTimer(timerObj.prop("segundos"), timerObj);
+        setHTMLTimer(timerObj.prop("segundos"), sym);
         timerObj.prop("segundos_restantes", timerObj.prop("segundos"));
         timerObj.prop("interval_id", -1);
-        timerObj.prop("nombre", nombreTimer);
+        timerObj.prop("nombre", data.sym);
         timerObj.prop("stopped", false);
         timerObj.prop("alertState", "normal");
     });
@@ -40,33 +44,35 @@ function inicializarTimer(sym, nombreTimer) {
 
 //*************************************************************************************
 
-function startTimer(sym, nombreTimer) {
-    var timerObj = sym.$(nombreTimer);
-    if (timerObj.prop("interval_id")<0 && !timerObj.prop("stopped"))
+function startTimer(sym) {
+    var stage = $(sym.getComposition().getStage().ele);
+    var timerObj = buscar_sym(sym, stage.prop("timer"), true);
+    //console.log(timerObj);
+    if (timerObj.prop("interval_id") < 0 && !timerObj.prop("stopped"))
     {
         var interval_id = setInterval(function () {
             var currentTime = timerObj.prop("segundos_restantes");
             currentTime--;
             timerObj.prop("timer_text").html(secondsToClockFormat(currentTime));
             timerObj.prop("segundos_restantes", currentTime);
-            
-            if($.inArray(currentTime, timerObj.prop("alertas"))>=0){
+
+            if ($.inArray(currentTime, timerObj.prop("alertas")) >= 0) {
                 $("body").trigger({
-			type: "TimeAlert",
-                        remaining_time: currentTime, 
-                        timerObj: timerObj,
-                        sym: sym
-		});
+                    type: "TimeAlert",
+                    remaining_time: currentTime,
+                    timerObj: timerObj,
+                    sym: sym
+                });
             }
-            
+
             if (currentTime <= 0) {
-                stopTimer(timerObj);
+                stopTimer(sym);
                 $("body").trigger({
-			type: "TimeOut",
-                        sym: sym
-		});
+                    type: "TimeOut",
+                    sym: sym
+                });
             }
-            
+
         }, 1000);
         timerObj.prop("interval_id", interval_id);
     }
@@ -74,8 +80,10 @@ function startTimer(sym, nombreTimer) {
 
 //*************************************************************************************
 
-function stopTimer(timerObj) {
-    if(timerObj.prop("interval_id")>=0){
+function stopTimer(sym) {
+    var stage = $(sym.getComposition().getStage().ele);
+    var timerObj = buscar_sym(sym, stage.prop("timer"), true);
+    if (timerObj.prop("interval_id") >= 0) {
         clearInterval(timerObj.prop("interval_id"));
         timerObj.prop("interval_id", -1);
         timerObj.prop("stopped", true);
@@ -84,26 +92,30 @@ function stopTimer(timerObj) {
 
 //*************************************************************************************
 
-function resetTimer(sym, timerObj) {
-    if(timerObj.prop("interval_id")>=0){
+function resetTimer(sym) {
+    var stage = $(sym.getComposition().getStage().ele);
+    var timerObj = buscar_sym(sym, stage.prop("timer"), true);
+    if (timerObj.prop("interval_id") >= 0) {
         clearInterval(timerObj.prop("interval_id"));
         timerObj.prop("interval_id", -1);
     }
-    
+
     var spanElement = timerObj.find("p");
     var newSpan = $('<span />').attr('className', 'folder_name').html(secondsToClockFormat(timerObj.prop("segundos")));
     spanElement.html(newSpan);
     timerObj.prop("segundos_restantes", timerObj.prop("segundos"));
     timerObj.prop("timer_text", spanElement);
     timerObj.prop("stopped", false);
-    
-    cambiarEstadoTimer(sym, timerObj, "normal");
+
+    cambiarEstadoTimer(sym, "normal");
 }
 
 //*************************************************************************************
 
-function setHTMLTimer(seconds, timerObj){
+function setHTMLTimer(seconds, sym) {
+    var stage = $(sym.getComposition().getStage().ele);
     var newSpan = $('<span />').html(secondsToClockFormat(seconds));
+    var timerObj = buscar_sym(sym, stage.prop("timer"), true);
     timerObj.prop("timer_text").html(newSpan);
 }
 

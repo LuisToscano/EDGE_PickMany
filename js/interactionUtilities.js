@@ -45,3 +45,8 @@ function buscar_sym(sym, arrSymSearch, boolJQUERY) {
     //EDGE_Plantilla.debug ? console.log(temp, arrSymSearch, boolJQUERY) : false;
     return temp;
 }
+
+$("body").on("EDGE_Recurso_Submit", function (evt) {
+    console.log("SUBMIT OBLIGADO");
+    checkAnswersPickMany(evt.sym);
+});

@@ -19,15 +19,16 @@
             js+"jquery-1.10.2.js",
             js+"pickManyUtilities.js",
             js+"timerUtilities.js",
-            js+"interactionUtilities.js"
+            js+"interactionUtilities.js",
+            js+"utility.js"
         ],
         symbols = {
             "stage": {
                 version: "6.0.0",
                 minimumCompatibleVersion: "5.0.0",
                 build: "6.0.0.400",
-                scaleToFit: "none",
-                centerStage: "none",
+                scaleToFit: "both",
+                centerStage: "both",
                 resizeInstances: false,
                 content: {
                     dom: [
@@ -112,14 +113,14 @@
                             '129px'
                         ],
                         [
-                            "eid42",
-                            "top",
+                            "eid35",
+                            "left",
                             500,
                             0,
                             "linear",
-                            "${Submit}",
-                            '303px',
-                            '303px'
+                            "${PICK_1}",
+                            '45px',
+                            '45px'
                         ],
                         [
                             "eid37",
@@ -142,14 +143,14 @@
                             '129px'
                         ],
                         [
-                            "eid35",
-                            "left",
+                            "eid42",
+                            "top",
                             500,
                             0,
                             "linear",
-                            "${PICK_1}",
-                            '45px',
-                            '45px'
+                            "${Submit}",
+                            '303px',
+                            '303px'
                         ]
                     ]
                 }
@@ -384,18 +385,18 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '128px', '31px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '128px', '31px', 'auto', 'auto'],
                             fill: ['rgba(241,248,33,1.00)']
                         },
                         {
-                            type: 'text',
+                            rect: ['9px', '3px', '112px', '20px', 'auto', 'auto'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​otro botón</p>',
-                            rect: ['9px', '3px', '112px', '20px', 'auto', 'auto'],
-                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
+                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
+                            type: 'text'
                         }
                     ],
                     style: {
@@ -422,25 +423,24 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '161px', '31px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            type: 'rect',
+                            rect: ['0px', '0px', '161px', '31px', 'auto', 'auto'],
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            rect: ['18px', '3px', '128px', '31px', 'auto', 'auto'],
                             font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
+                            type: 'text',
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​TIMER</p>',
                             align: 'center',
-                            type: 'text'
+                            rect: ['18px', '3px', '128px', '31px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '161px', '34px']
+                            rect: [null, null, '161px', '34px']
                         }
                     }
                 },

@@ -19,7 +19,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       Symbol.bindElementAction(compId, symbolName, "${PICK_1}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
-         startTimer(sym, "TIMER_CONTAINER");
+         startTimer(sym);
          pickClickeado(sym, "PICK_1");
 
       });
@@ -27,7 +27,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       Symbol.bindSymbolAction(compId, symbolName, "creationComplete", function(sym, e) {
          // Insertar código para ejecutarse cuando el símbolo se crea aquí
-         inicializarTimer(sym, "TIMER_CONTAINER");
+         inicializarTimer(sym);
          inicializarPickMany(sym);
 
       });
@@ -35,7 +35,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       Symbol.bindElementAction(compId, symbolName, "${PICK_2}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
-         startTimer(sym, "TIMER_CONTAINER");
+         startTimer(sym);
          pickClickeado(sym, "PICK_2");
 
       });
@@ -43,7 +43,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       Symbol.bindElementAction(compId, symbolName, "${PICK_3}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
-         startTimer(sym, "TIMER_CONTAINER");
+         startTimer(sym);
          pickClickeado(sym, "PICK_3");
 
       });
@@ -51,7 +51,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
 
       Symbol.bindElementAction(compId, symbolName, "${PICK_4}", "click", function(sym, e) {
          // introducir aquí código para clic de ratón
-         startTimer(sym, "TIMER_CONTAINER");
+         startTimer(sym);
          pickClickeado(sym, "PICK_4");
 
       });

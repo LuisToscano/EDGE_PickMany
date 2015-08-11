@@ -68,7 +68,7 @@ $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
 });
 
 $("body").on("EDGE_Recurso_sendPreviousData", function (data) {
-
+    inicializarPickMany(data.sym);
     var stage = $(data.sym.getComposition().getStage().ele);
     aplicarCambiosPreviosPickMany(data.previous_data, data.sym);
 
@@ -302,4 +302,8 @@ function nombreANumero(strNombre) {
     }
 }
 
-        
+//***********************************************************************
+
+function inicializar(sym) {
+    inicializarPickMany(sym);
+}       

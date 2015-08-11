@@ -135,6 +135,7 @@ function inicializarPicks(sym) {
         pickObj.prop("correct", !esRespuesta);
         pickObj.prop("descripcion", objPicks[i].descripcion);
         pickObj.prop("nombre", "PICK_" + i);
+        pickObj.prop("current_state", "normal");
     }
 
     if (contRespuestas > 1) {
@@ -183,10 +184,10 @@ function seleccionarPick(sym, nombrePick) {
         var pickObj = sym.$(nombrePick);
         var boolSelected = pickObj.prop("selected");
         if (boolSelected) {
-            sym.getSymbol(nombrePick).play("normal");
+            cambiarEstadoPick(sym, nombrePick, "normal");
         }
         else {
-            sym.getSymbol(nombrePick).play("seleccionado");
+            cambiarEstadoPick(sym, nombrePick, "seleccionado")
         }
 
         pickObj.prop("selected", !boolSelected);
@@ -200,8 +201,18 @@ function deseleccionarPick(sym, nombrePick) {
     var pickObj = sym.$(nombrePick);
     if (pickObj.prop("selected")) {
         pickObj.prop("selected", false);
-        sym.getSymbol(nombrePick).play("normal");
+        cambiarEstadoPick(sym, nombrePick, "normal")
         pickObj.prop("correct", pickObj.prop("esRespuesta") === pickObj.prop("selected"));
+    }
+}
+
+//**********************************************************************************
+
+function cambiarEstadoPick(sym, nombrePick, new_state){
+    var pickObj = sym.$(nombrePick);
+    if (pickObj.prop("current_state")!== new_state) {
+        sym.getSymbol(nombrePick).play(new_state);
+        pickObj.prop("current_state", new_state);
     }
 }
 

@@ -48,7 +48,7 @@
                             id: 'PICK_3',
                             symbolName: 'PICK_3',
                             type: 'rect',
-                            rect: ['294px', '129px', 'undefined', 'undefined', 'auto', 'auto']
+                            rect: ['295px', '129px', 'undefined', 'undefined', 'auto', 'auto']
                         },
                         {
                             id: 'PICK_4',
@@ -113,24 +113,24 @@
                             '129px'
                         ],
                         [
-                            "eid35",
-                            "left",
+                            "eid42",
+                            "top",
                             500,
                             0,
                             "linear",
-                            "${PICK_1}",
-                            '45px',
-                            '45px'
+                            "${Submit}",
+                            '303px',
+                            '303px'
                         ],
                         [
-                            "eid37",
+                            "eid54",
                             "left",
                             500,
                             0,
                             "linear",
                             "${PICK_3}",
-                            '294px',
-                            '294px'
+                            '295px',
+                            '295px'
                         ],
                         [
                             "eid40",
@@ -143,14 +143,14 @@
                             '129px'
                         ],
                         [
-                            "eid42",
-                            "top",
+                            "eid35",
+                            "left",
                             500,
                             0,
                             "linear",
-                            "${Submit}",
-                            '303px',
-                            '303px'
+                            "${PICK_1}",
+                            '45px',
+                            '45px'
                         ]
                     ]
                 }
@@ -175,16 +175,18 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '54px', '54px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '54px', '54px']
                         }
                     }
                 },
                 timeline: {
-                    duration: 500,
+                    duration: 750,
                     autoPlay: false,
                     labels: {
                         "normal": 0,
-                        "seleccionado": 250
+                        "seleccionado": 250,
+                        "hover": 500
                     },
                     data: [
                         [
@@ -205,6 +207,16 @@
                             "linear",
                             "${Ellipse}",
                             'rgba(37,254,50,1)',
+                            'rgba(254,254,37,1.00)'
+                        ],
+                        [
+                            "eid53",
+                            "background-color",
+                            750,
+                            0,
+                            "linear",
+                            "${Ellipse}",
+                            'rgba(254,254,37,1.00)',
                             'rgba(254,37,247,1.00)'
                         ]
                     ]
@@ -230,16 +242,18 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '54px', '54px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '54px', '54px']
                         }
                     }
                 },
                 timeline: {
-                    duration: 500,
+                    duration: 750,
                     autoPlay: false,
                     labels: {
                         "normal": 0,
-                        "seleccionado": 250
+                        "seleccionado": 250,
+                        "hover": 500
                     },
                     data: [
                         [
@@ -260,6 +274,16 @@
                             "linear",
                             "${Ellipse}",
                             'rgba(37,254,50,1)',
+                            'rgba(247,255,0,1.00)'
+                        ],
+                        [
+                            "eid55",
+                            "background-color",
+                            750,
+                            0,
+                            "linear",
+                            "${Ellipse}",
+                            'rgba(247,255,0,1.00)',
                             'rgba(255,0,0,1.00)'
                         ]
                     ]
@@ -285,16 +309,18 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '54px', '54px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '54px', '54px']
                         }
                     }
                 },
                 timeline: {
-                    duration: 500,
+                    duration: 750,
                     autoPlay: false,
                     labels: {
                         "normal": 0,
-                        "seleccionado": 250
+                        "seleccionado": 250,
+                        "hover": 500
                     },
                     data: [
                         [
@@ -315,6 +341,16 @@
                             "linear",
                             "${Ellipse}",
                             'rgba(37,254,50,1)',
+                            'rgba(239,255,14,1.00)'
+                        ],
+                        [
+                            "eid57",
+                            "background-color",
+                            500,
+                            250,
+                            "linear",
+                            "${Ellipse}",
+                            'rgba(239,255,14,1.00)',
                             'rgba(255,151,0,1.00)'
                         ]
                     ]
@@ -340,16 +376,18 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '54px', '54px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '54px', '54px']
                         }
                     }
                 },
                 timeline: {
-                    duration: 500,
+                    duration: 750,
                     autoPlay: false,
                     labels: {
                         "normal": 0,
-                        "seleccionado": 250
+                        "seleccionado": 250,
+                        "hover": 500
                     },
                     data: [
                         [
@@ -370,6 +408,16 @@
                             "linear",
                             "${Ellipse}",
                             'rgba(37,254,50,1)',
+                            'rgba(235,241,48,1.00)'
+                        ],
+                        [
+                            "eid58",
+                            "background-color",
+                            750,
+                            0,
+                            "linear",
+                            "${Ellipse}",
+                            'rgba(235,241,48,1.00)',
                             'rgba(0,191,197,1.00)'
                         ]
                     ]
@@ -385,18 +433,18 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '128px', '31px', 'auto', 'auto'],
                             id: 'Rectangle',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
-                            rect: ['0px', '0px', '128px', '31px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(241,248,33,1.00)']
                         },
                         {
-                            rect: ['9px', '3px', '112px', '20px', 'auto', 'auto'],
+                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​otro botón</p>',
-                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
-                            type: 'text'
+                            type: 'text',
+                            rect: ['9px', '3px', '112px', '20px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -423,19 +471,19 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['0px', '0px', '161px', '31px', 'auto', 'auto'],
                             id: 'Rectangle',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['0px', '0px', '161px', '31px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal'],
                             type: 'text',
+                            rect: ['18px', '3px', '128px', '31px', 'auto', 'auto'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​TIMER</p>',
                             align: 'center',
-                            rect: ['18px', '3px', '128px', '31px', 'auto', 'auto']
+                            font: ['Arial, Helvetica, sans-serif', [24, ''], 'rgba(0,0,0,1)', 'normal', 'none', '', 'break-word', 'normal']
                         }
                     ],
                     style: {

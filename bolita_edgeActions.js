@@ -64,6 +64,86 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       });
       //Edge binding end
 
+      Symbol.bindElementAction(compId, symbolName, "${PICK_1}", "mouseout", function(sym, e) {
+         // introducir código que se ejecute cuando el ratón se mueva fuera del objeto
+         var nombrePick = "PICK_1";
+         if(!sym.$(nombrePick).prop("selected")){
+         	sym.getSymbol(nombrePick).play("normal");
+         }
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${PICK_1}", "mouseover", function(sym, e) {
+         // introducir código que se ejecute cuando se sitúe el ratón sobre el objeto
+         var nombrePick = "PICK_1";
+         if(!sym.$(nombrePick).prop("selected")){
+         	sym.getSymbol(nombrePick).play("hover");
+         }
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${PICK_2}", "mouseout", function(sym, e) {
+         // introducir código que se ejecute cuando el ratón se mueva fuera del objeto
+         var nombrePick = "PICK_2";
+         if(!sym.$(nombrePick).prop("selected")){
+         	sym.getSymbol(nombrePick).play("normal");
+         }
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${PICK_3}", "mouseover", function(sym, e) {
+         // introducir código que se ejecute cuando se sitúe el ratón sobre el objeto
+         var nombrePick = "PICK_3";
+         if(!sym.$(nombrePick).prop("selected")){
+         	sym.getSymbol(nombrePick).play("hover");
+         }
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${PICK_3}", "mouseout", function(sym, e) {
+         // introducir código que se ejecute cuando el ratón se mueva fuera del objeto
+         var nombrePick = "PICK_3";
+         if(!sym.$(nombrePick).prop("selected")){
+         	sym.getSymbol(nombrePick).play("normal");
+         }
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${PICK_4}", "mouseover", function(sym, e) {
+         // introducir código que se ejecute cuando se sitúe el ratón sobre el objeto
+         var nombrePick = "PICK_4";
+         if(!sym.$(nombrePick).prop("selected")){
+         	sym.getSymbol(nombrePick).play("hover");
+         }
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${PICK_4}", "mouseout", function(sym, e) {
+         // introducir código que se ejecute cuando el ratón se mueva fuera del objeto
+         var nombrePick = "PICK_4";
+         if(!sym.$(nombrePick).prop("selected")){
+         	sym.getSymbol(nombrePick).play("normal");
+         }
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${PICK_2}", "mouseover", function(sym, e) {
+         // introducir código que se ejecute cuando se sitúe el ratón sobre el objeto
+         var nombrePick = "PICK_2";
+         if(!sym.$(nombrePick).prop("selected")){
+         	sym.getSymbol(nombrePick).play("hover");
+         }
+
+      });
+      //Edge binding end
+
    })("stage");
    //Edge symbol end:'stage'
 
@@ -73,7 +153,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
    (function(symbolName) {   
    
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function(sym, e) {
-         
+         sym.stop();
 
       });
       //Edge binding end
@@ -89,6 +169,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
          // introducir código aquí
          sym.stop();
 
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 750, function(sym, e) {
+         // introducir código aquí
       });
       //Edge binding end
 
@@ -115,7 +200,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function(sym, e) {
-         
+         sym.stop();
 
       });
       //Edge binding end
@@ -143,7 +228,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function(sym, e) {
-         
+         sym.stop();
 
       });
       //Edge binding end
@@ -171,7 +256,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // los alias más comu
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 500, function(sym, e) {
-         
+         sym.stop();
 
       });
       //Edge binding end

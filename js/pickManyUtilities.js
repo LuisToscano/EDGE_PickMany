@@ -108,7 +108,7 @@ function inicializarPickMany(sym) {
         stage.prop("cantidad_picks", cont);
         inicializarPicks(sym);
         stage.prop("usa_timer", typeof startTimer == 'function');
-        enviarEventoActividadTerminada(sym);
+        //enviarEventoActividadTerminada(sym);
     });
 }
 

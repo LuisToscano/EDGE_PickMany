@@ -52,8 +52,9 @@ $("body").on("EDGE_Recurso_postSubmitApplied", function (data) {
 
     if (data.block) {
         stage.prop("blocked", true);
-        if (stage.prop("usa_timer")) {
+        deshabilitarPickManys(data.sym);
 
+        if (stage.prop("usa_timer")) {
             stopTimer(data.sym);
         }
     } else {
@@ -74,7 +75,8 @@ $("body").on("EDGE_Recurso_sendPreviousData", function (data) {
 
     if (data.block) {
         stage.prop("blocked", true);
-        if (stage.prop("usa_timer") ) {
+        deshabilitarPickManys(data.sym);
+        if (stage.prop("usa_timer")) {
             setHTMLTimer(data.timer.remaining_time, data.sym);
             cambiarEstadoTimer(data.sym, data.timer.current_state);
         }
@@ -107,7 +109,7 @@ function inicializarPickMany(sym) {
         });
         stage.prop("cantidad_picks", cont);
         inicializarPicks(sym);
-        stage.prop("usa_timer", typeof startTimer == 'function');
+        stage.prop("usa_timer", !isEmpty(stage.prop("timer")));
         //enviarEventoActividadTerminada(sym);
     });
 }
@@ -184,7 +186,7 @@ function seleccionarPick(sym, nombrePick) {
         var pickObj = sym.$(nombrePick);
         var boolSelected = pickObj.prop("selected");
         if (boolSelected) {
-            cambiarEstadoPick(sym, nombrePick, "normal");
+            cambiarEstadoPick(sym, nombrePick, "hover");
         }
         else {
             cambiarEstadoPick(sym, nombrePick, "seleccionado")
@@ -208,9 +210,9 @@ function deseleccionarPick(sym, nombrePick) {
 
 //**********************************************************************************
 
-function cambiarEstadoPick(sym, nombrePick, new_state){
+function cambiarEstadoPick(sym, nombrePick, new_state) {
     var pickObj = sym.$(nombrePick);
-    if (pickObj.prop("current_state")!== new_state) {
+    if (pickObj.prop("current_state") !== new_state) {
         sym.getSymbol(nombrePick).play(new_state);
         pickObj.prop("current_state", new_state);
     }
@@ -220,7 +222,6 @@ function cambiarEstadoPick(sym, nombrePick, new_state){
 
 function checkAnswersPickMany(sym) {
 
-    var interactionId = "";
     var stage = $(sym.getComposition().getStage().ele);
     if (!stage.prop("blocked")) {
         var CANTIDAD_PICKS = stage.prop("cantidad_picks");
@@ -289,6 +290,15 @@ function mostrarRespuestasPickMany(sym) {
 
 //***********************************************************************
 
+function deshabilitarPickManys(sym) {
+    var stage = $(sym.getComposition().getStage().ele);
+    var CANTIDAD_PICKS = stage.prop("cantidad_picks");
+    for (var i = 1; i <= CANTIDAD_PICKS; i++) {
+        sym.$("PICK_" + i).off();
+    }
+}
+//***********************************************************************
+
 //retorna la parte numérica del nombre de un elemento
 // ej: DROP_1 -> 1
 
@@ -306,4 +316,4 @@ function nombreANumero(strNombre) {
 
 function inicializar(sym) {
     inicializarPickMany(sym);
-}       
+}

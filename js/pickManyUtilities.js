@@ -97,6 +97,10 @@ function inicializarPickMany(sym) {
     stage.prop("intentos_previos", 0);
     stage.prop("blocked", false);
 
+    $.ajaxSetup({
+        async: false
+    });
+
     $.getJSON("config.json", function (data) {
         $.each(data, function (key, val) {
             stage.prop(key, val);

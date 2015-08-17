@@ -97,10 +97,6 @@ function inicializarPickMany(sym) {
     stage.prop("intentos_previos", 0);
     stage.prop("blocked", false);
 
-    $.ajaxSetup({
-        async: false
-    });
-
     $.getJSON("config.json", function (data) {
         $.each(data, function (key, val) {
             stage.prop(key, val);
@@ -294,6 +290,32 @@ function mostrarRespuestasPickMany(sym) {
 
 //***********************************************************************
 
+$("body").on("EDGE_Recurso_eliminarOpciones", function (data) {
+	eliminarPicks(data.sym, data.cantidad);
+});
+
+function eliminarPicks(sym, cantidad) {
+    var stage = $(sym.getComposition().getStage().ele);
+    var CANTIDAD_PICKS = stage.prop("cantidad_picks");
+	
+	var arrayPicks = [];
+    for (var i = 1; i <= CANTIDAD_PICKS; i++) {
+        if(!sym.$("PICK_" + i).prop("esRespuesta")){
+			arrayPicks.push(sym.$("PICK_" + i));
+		}
+    }
+	arrayPicks = shuffleArray(arrayPicks);
+	for(var i=0; i<cantidad; i++){
+		if(i<arrayPicks.length){
+			arrayPicks[i].hide();
+			arrayPicks[i].prop("selected", false);
+			arrayPicks[i].prop("correct", true);
+		}
+	}
+}
+
+//***********************************************************************
+
 function deshabilitarPickManys(sym) {
     var stage = $(sym.getComposition().getStage().ele);
     var CANTIDAD_PICKS = stage.prop("cantidad_picks");
@@ -301,6 +323,13 @@ function deshabilitarPickManys(sym) {
         sym.$("PICK_" + i).off();
     }
 }
+//***********************************************************************
+
+function shuffleArray(o){
+    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+}
+
 //***********************************************************************
 
 //retorna la parte numérica del nombre de un elemento
